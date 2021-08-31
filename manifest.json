@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Vendor Vacuum",
+    "version": "0.1.0",
+    "description": "Removes vendor diffs from the changelist in gitlab's merge request.",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*/merge_requests/*/diffs*"
+            ],
+            "js": [
+                "vacuum.js"
+            ]
+        }
+    ]
+}
